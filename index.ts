@@ -13,9 +13,13 @@ axios.get(url).then(resp => {
 
   const { id, title, completed } = todo;
 
+  logTodo(id, title, completed);
+});
+
+function logTodo(id: number, title: string, completed: boolean) {
   console.table({
     id,
     title,
     completed,
   });
-});
+}
